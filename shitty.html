@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>McDuck's App</title>
+        <style>
+            body {
+                text-align: center;
+                background: rgb(163, 197, 129);
+            }
+            h1, h2, h3, p {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: black;
+            }
+            p {
+                font-size: 1em;
+            }
+            button {
+                background: rgb(102, 102, 209);
+                border: none;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                animation: popIn 1.5s ease;
+            }
+            button:hover {
+                transform: scale(1.1);
+                background: #ffc107;
+            }
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+             @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+   @keyframes popIn {
+      0% {
+        transform: scale(0);
+      }
+      80% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+        </style>
+    </head>
+    <body>
+        <h1> McDuck's Local Offers</h1>
+        <!--1. Create a HTML button that when clicked calls the Javascript getLocation() function -->
+        <button onclick="getLocation()">McDuck's Check-in</button>
+        <!--Two containers, called divs, used to show message to user -->
+        <div id="geodisplay"></div>
+        <div id="effect"></div>
+        <script>
+            function getLocation() {
+                if (navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showLocation);
+                }
+            }
+            function showLocation(position){
+                // 2. Hardcode your store location on line 12 and 13, and update the comment to reflect your McDuck's restaurant address
+                // Nik's apt @ Perry & W 4th St (change to your restaurant location)
+                
+                var mcduckslat=40.735383;
+                var mcduckslon=74.002994;
+
+                // current location
+                var currentpositionlat=position.coords.latitude;
+                var currentpositionlon=position.coords.longitude;
+
+                // calculate the distance between current location and McDuck's location
+                var distance=getDistanceFromLatLonInMiles(mcducslat, mcduckslon, currentpositionlat, currentpositionlon);
+
+                // Displays the location using .innerHTML property and the lat & long coordinates for your current location
+                document.getElementById("geodisplay").innerHTML="Latitude: " + currentpositionlat + "<br>Longitude: " + currentpositionlon;
+            }
+            // haversine distance formula
+            alert(distance =1.0);
+
+            if (distance <0.5) {
+                alert("You get a free burger");
+            }
+            else {
+                alert("Thanks for checking in!")
+            }
+        </script>
+    </body>
+</html>

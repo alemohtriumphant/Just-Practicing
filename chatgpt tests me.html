@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Portfolio</title>
+  <style>
+    body {
+      background-color: yellowgreen;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #header {
+      background-color: black;
+      color: yellow;
+      padding: 20px;
+      text-align: center;
+    }
+    #header h1 {
+      font-size: 70px;
+      font-family: cursive;
+      margin: 0;
+    }
+    #header h2 {
+      font-size: 25px;
+      font-family: serif;
+      margin: 10px 0 0;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    #about {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      width: 280px;
+      border-radius: 10px;
+    }
+    #about img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .card {
+      width: 300px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card h2 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      color: #333;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+      padding: 0 15px 15px;
+    }
+    .card button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .card button:hover {
+      background: #0056b3;
+    }
+    form {
+      text-align: center;
+      margin: 20px;
+    }
+    form input, form textarea {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form input[type="submit"] {
+      background: black;
+      color: yellowgreen;
+      cursor: pointer;
+    }
+    #footer {
+      background-color: black;
+      color: yellowgreen;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>CYB£RSTROK£</h1>
+    <h2>"A curious learner exploring web development"</h2>
+  </div>
+
+  <div class="container">
+    <div id="about">
+      <p>My name is Triumphant Samuel (CyberStroke). I love eating food 🍲, playing football ⚽, studying tech 💻, and discovering new things. This is my picture below:</p>
+      <img src="https://picsum.photos/200" alt="My Picture">
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300/200" alt="Project Image">
+      <h2>My First Project</h2>
+      <p>This is where I’ll describe my first project in detail.</p>
+      <button>View More</button>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/300/201" alt="Project Image">
+      <h2>My Second Project</h2>
+      <p>This is another project I’m working on.</p>
+      <button>View More</button>
+    </div>
+  </div>
+
+  <form action="#" method="post">
+    <input type="text" placeholder="Type your name here">
+    <input type="email" placeholder="Enter your email">
+    <textarea placeholder="Enter your message"></textarea>
+    <input type="submit" value="Send">
+  </form>
+
+  <footer id="footer">
+    <p>© 2025 CyberStroke</p>
+  </footer>
+</body>
+</html>
